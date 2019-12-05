@@ -25,4 +25,6 @@ For example, if the MSN of the input byte was __0__, __1__, __1__, __0__, the en
 ![Image of parity-eg](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/parity-example.png)<br/>
 As evident in the example above, each circle has two 1s and 2 zeros. This is how the decoder can detect errors. If a circle has an odd parity, that is, an odd number of zeros and ones, then it knows there is an incorrect bit somewhere. Not only can the decoder identify that there is a mistake, it can deduce where the mistake is.<br/>
 If one of the outer-circle bits is flipped, for example:<br/>
-![Image of odd-parity1](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/odd-parity-1.png)
+![Image of odd-parity1](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/odd-parity-1.png)<br/>
+The decoder will detect that only one circle, the top right in this case, has an odd parity. If however, an inbetween bit is flipped, as illustrated below:<br/>
+![Image of odd-parity2](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/odd-parity-2.png)<br/>
