@@ -8,11 +8,11 @@ Encoding works as follows:
 "d3" represents data bit 3, "d2" represents data bit 2 etc.
 2. The input byte is split into the most significant nibble (MSN or MSB) and least significant nibble (LSN or LSB). The MSN is the first 4 bits of the input byte and the LSN is the last 4 bits of the input byte.
 ![Image of msn-lsn](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/msb-lsb.png)
-3. Two new bytes are created with the MSN and LSN of the original input byte. Yes, this is not efficient but it is somewhat robust. The output of this is two bytes as visualized below:
+3. Two new bytes are created with the MSN and LSN of the original input byte. Yes, this is not efficient but it is somewhat robust. The output of this is two bytes as visualized below:<br/>
 
 _MSN of original bit inbetween parity bits_
-![Image of msn-parity](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/msb-parity.png)
+![Image of msn-parity](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/msb-parity.png)<br/>
 
 _LSN of original bit inbetween parity bits_
-![Image of lsn-parity](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/lsb-parity.png)
+![Image of lsn-parity](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/lsb-parity.png)<br/>
 
