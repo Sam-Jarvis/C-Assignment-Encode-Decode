@@ -23,4 +23,6 @@ The roubstness of this encoder/decoder is based on the theory of parity bits. Th
 The 4 data bits, either the MSN or LSN of the original input byte, are stored in the overlapping segments of the circles. The outer bit in each circle is the parity bit for that specific circle. The parity value is decided upon before hand, in this case, the parity must be even. What this means is, in each circle, there must be an even number of zeros and and ones. Both the encoder and decoder know this.<br/>
 For example, if the MSN of the input byte was __0__, __1__, __1__, __0__, the encoder will set the parity circles for the MSN's output byte to:</br>
 ![Image of parity-eg](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/parity-example.png)<br/>
-As evident above, each circle has 
+As evident in the example above, each circle has two 1s and 2 zeros. This is how the decoder can detect errors. If a circle has an odd parity, that is, an odd number of zeros and ones, then it knows there is an incorrect bit somewhere. Not only can the decoder identify that there is a mistake, it can deduce where the mistake is.<br/>
+If one of the outer-circle bits is flipped, for example:<br/>
+![Image of odd-parity1](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/odd-parity-1.png)
