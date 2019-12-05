@@ -17,6 +17,8 @@ _MSN of original bit inbetween parity bits_
 _LSN of original bit inbetween parity bits_
 "p2" represents parity bit 2, "p1" represents parity bit 1 etc.
 
+Once the parity circles are set, the encode file writes these two new output bytes to a binary file.
+
 ### Parity
 The roubstness of this encoder/decoder is based on the theory of parity bits. This can be visualized by these parity circles (venn diagram).<br/>
 ![Image of parity-temp](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/parity-template.png)<br/>
@@ -30,3 +32,9 @@ The decoder will detect that only one circle, the top right in this case, has an
 ![Image of odd-parity2](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/odd-parity-2.png)<br/>
 The decoder will see that both the top right and top left circles have an odd parity. This way, it knows that the incorrect bit must be the bit that links the two incorrect circles. Finally, if the middle bit is flipped, all three circles will have an odd parity. For completeness, this is illustrated below.<br/>
 ![Image of odd-parity3](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/odd-parity-3.png)<br/>
+
+## Channel
+The channel file is much simpler than the encode or decode files. Its purpose is to simulate a bad connection while transmitting the output of the encode function to a device with the decode function. The channel file simply reads a byte from the input file specified, the outoput file of the encode function, and flips a single, random bit in each byte. In then outputs this to a binary file.
+
+## Decode
+The decode function does the opposite of the encode function, obviously. It reads two input bytes from the input file, the output file of the channel function in this case, and checks the parity circles for each byte. If there is corrupt data, it will find which bit is corrupt and flip it. Once it has done this for each of the two bytes, it extracts the data bits from both bytes and correctly concatenates them into the original input byte given to the encode function. 
