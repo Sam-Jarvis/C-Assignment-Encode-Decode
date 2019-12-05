@@ -9,6 +9,8 @@ Encoding works as follows:<br>
 2. The input byte is split into the most significant nibble (MSN or MSB) and least significant nibble (LSN or LSB). The MSN is the first 4 bits of the input byte and the LSN is the last 4 bits of the input byte.
 ![Image of msn-lsn](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/msb-lsb.png)
 3. Two new bytes are created with the MSN and LSN of the original input byte. Yes, this is not efficient but it is somewhat robust. The output of this is two bytes as visualized below:<br>
-MSN -> ![Image of msn-parity](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/msb-lsb.png)
-LSN -> ![Image of lsn-parity](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/lsb-parity.png)
+MSN <br>
+![Image of msn-parity](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/msb-parity.png)
+<LSN <br>
+![Image of lsn-parity](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/lsb-parity.png)
 
