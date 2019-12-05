@@ -4,3 +4,4 @@ This project consists of three parts, encoding, simulating bad transmission and 
 ## Encoding
 Encoding works as follows:<br>
 1. A byte is read in from the input file. Visually, the byte looks like this:
+![Image of Yaktocat](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/input-byte.png)
