@@ -28,3 +28,5 @@ If one of the outer-circle bits is flipped, for example:<br/>
 ![Image of odd-parity1](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/odd-parity-1.png)<br/>
 The decoder will detect that only one circle, the top right in this case, has an odd parity. If however, an inbetween bit is flipped, as illustrated below:<br/>
 ![Image of odd-parity2](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/odd-parity-2.png)<br/>
+The decoder will see that both the top right and top left circles have an odd parity. This way, it knows that the incorrect bit must be the bit that links the two incorrect circles. Finally, if the middle bit is flipped, all three circles will have an odd parity. For completeness, this is illustrated below.<br/>
+![Image of odd-parity3](https://github.com/Sam-Jarvis/C-Assignment-Encode-Decode/blob/master/images-for-documentation/odd-parity-3.png)<br/>
